@@ -11,6 +11,8 @@ github.com/mattn/go-isatty v0.0.17 h1:BTarxUcIeDqL27Mc+vyvdWYSL28zpIhv3RoTdsLMPn
 github.com/mattn/go-isatty v0.0.17/go.mod h1:kYGgaQfpe5nmfYZH+SKPsOc2e4SrIfOl2e/yFXSvRLM=
 github.com/mindwingx/abstraction v0.0.0-20230824134510-e625dca9126b h1:H4l1W+UNIp81n6gqlMaZa2ySJh/HcJczmmZCG9E66qA=
 github.com/mindwingx/abstraction v0.0.0-20230824134510-e625dca9126b/go.mod h1:3apSfvhyAhti/txiNt3NnGa/twNjVqIeyGNvGOriThw=
+github.com/mindwingx/abstraction v0.0.0-20230824233118-e031103bba27 h1:advNYA9tc+0eu8bH8MlfPf5jGkJ4caSXSIAU6ZBC0Ss=
+github.com/mindwingx/abstraction v0.0.0-20230824233118-e031103bba27/go.mod h1:3apSfvhyAhti/txiNt3NnGa/twNjVqIeyGNvGOriThw=
 github.com/mindwingx/go-helper v0.0.0-20230823115142-6448921aaddd h1:hbV5MrQGvDE+iPRv9xprju3OuAPsb5Qr6lS4Mb1xqc8=
 github.com/mindwingx/go-helper v0.0.0-20230823115142-6448921aaddd/go.mod h1:UAJywWDOBKwt+rI6EPiVmEDCJARPNePIsGu43vyLzcA=
 golang.org/x/sys v0.0.0-20220811171246-fbc7d0a398ab/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=

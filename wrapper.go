@@ -70,7 +70,7 @@ func (r *rpcEngine) StartRpc() {
 	}
 }
 
-func (r *rpcEngine) Caller(address string, rpcMethod string, args interface{}, reply interface{}) (err error) {
+func (r *rpcEngine) Caller(address string, method string, args interface{}, reply interface{}) (err error) {
 	var value []string
 
 	if !strings.Contains(address, ":") {
@@ -91,7 +91,7 @@ func (r *rpcEngine) Caller(address string, rpcMethod string, args interface{}, r
 
 	defer dial.Close()
 
-	err = dial.Call(rpcMethod, args, reply)
+	err = dial.Call(method, args, reply)
 	if err != nil {
 		//todo: call logger
 		return
