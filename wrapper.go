@@ -7,6 +7,7 @@ import (
 	"github.com/mindwingx/go-helper"
 	"net"
 	"net/rpc"
+	"strings"
 )
 
 type (
@@ -69,12 +70,23 @@ func (r *rpcEngine) StartRpc() {
 	}
 }
 
-func (r *rpcEngine) Caller(destinationPort string, rpcMethod string, args interface{}, reply interface{}) (err error) {
-	port := fmt.Sprintf(":%s", destinationPort)
-	dial, err := rpc.DialHTTP(r.config.Network, port)
+func (r *rpcEngine) Caller(address string, rpcMethod string, args interface{}, reply interface{}) (err error) {
+	var value []string
+
+	if !strings.Contains(address, ":") {
+		value = []string{"", address}
+	} else {
+		value = strings.Split(address, ":")
+	}
+
+	dial, err := rpc.Dial(
+		r.config.Network,
+		fmt.Sprintf("%s:%s", value[0], value[1]), // address:port
+	)
+
 	if err != nil {
-		//todo: call logger
-		return
+		//todo: handle logger
+		return err
 	}
 
 	defer dial.Close()
